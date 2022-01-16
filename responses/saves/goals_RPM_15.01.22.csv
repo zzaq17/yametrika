@@ -1,0 +1,333 @@
+﻿Сайт,"id цели",Название,"Тип цели",Ретаргетинг,"Способ создания","Ценность цели","Условие цели",URL
+laparoskopiya.ru,41047356,Звонок,звонок,1,auto,0
+laparoskopiya.ru,201653962,"Целевой звонок","целевой звонок",1,auto,0
+laparoskopiya.ru,201653959,"Уникально-целевой звонок","целевой звонок",1,auto,0
+laparoskopiya.ru,201653956,"Уникальный звонок","целевой звонок",1,auto,0
+laparoskopiya.ru,203219479,"Автоцель: отправка формы","отправка формы",1,auto,0
+laparoskopiya.ru,202573846,"Заявка: любая форма","по URL страницы",1,user,0,содержит,/submitted
+laparoskopiya.ru,98919589,"Записаться на приём. Заявка из поп-апа - Header","по URL страницы",1,user,385,содержит,/tilda/form162444545/submitted
+laparoskopiya.ru,98919610,"2 экран: Записаться на приём к врачу","по URL страницы",1,user,385,содержит,/tilda/form183628784/submitted
+laparoskopiya.ru,98919802,"2 Экран: Узнать цены","по URL страницы",1,user,385,содержит,/tilda/form183622378/submitted
+laparoskopiya.ru,98920054,"Что потребуется перед операцией: Записаться на операцию","по URL страницы",1,user,385,содержит,/tilda/form65235014/submitted
+laparoskopiya.ru,98920069,"Бесплатная консультация по телефону: Заказать консультацию","по URL страницы",1,user,385,содержит,/tilda/form183620916/submitted
+laparoskopiya.ru,98920105,"Блок Цен: Записаться на приём к врачу","по URL страницы",1,user,385,содержит,/tilda/form183642926/submitted
+laparoskopiya.ru,98920183,"Блок Цен: Узнать цены","по URL страницы",1,user,400,содержит,/tilda/form183643278/submitted
+laparoskopiya.ru,41072524,"Отправлен отзыв с Главной","по URL страницы",0,user,10,содержит,/tilda/form65235035/submitted
+laparoskopiya.ru,202489531,"Записаться на ОНЛАЙН консультацию. Из поп-апа - Header","по URL страницы",1,user,385,содержит,/tilda/form337883761/submitted
+laparoskopiya.ru,202489585,"Заявка на обратный звонок. Заявка из поп-апа - Header","по URL страницы",1,user,385,содержит,/tilda/form337889981/submitted
+laparoskopiya.ru,202490995,"Автоцель Jivo: автоприглашение в чат",JavaScript-событие,0,auto,0,совпадает,Jivo_Proactive_invitation_accepted
+laparoskopiya.ru,202500556,"Автоцель Jivo: запуск чата клиентом",JavaScript-событие,0,auto,0,совпадает,Jivo_Client_initiate_chat
+laparoskopiya.ru,202970665,"Автоцель Jivo: офлайн-сообщение",JavaScript-событие,0,auto,0,совпадает,Jivo_Offline_message_sent
+laparoskopiya.ru,204471103,"Автоцель Jivo: ручное приглашение в чат",JavaScript-событие,0,auto,0,совпадает,Jivo_Client_answer_on_agent_request
+laparoskopiya.ru,202727869,"Автоцель: поиск по сайту","поиск по сайту",0,auto,0
+laparoskopiya.ru,202991254,"Автоцель: клик по номеру телефона","клик по номеру телефона",0,auto,0
+laparoskopiya.ru,204284077,"Автоцель: клик по email","клик по email",0,auto,0
+laparoskopiya.ru,220049032,"CRMstat: Лид",JavaScript-событие,0,user,0,совпадает,crmstat-lead
+laparoskopiya.ru,220049038,"CRMstat: Продажа",JavaScript-событие,0,user,0,совпадает,crmstat-sale
+laparoskopiya.ru,41072593,"Архив Callback","по URL страницы",0,user,0,содержит,/tilda/form65346279/submitted/
+laparoskopiya.ru,41072560,"Архив Appointment","по URL страницы",0,user,0,содержит,/tilda/form65346196/submitted/
+laparoskopiya.ru,98919601,"Архив  Моб Хедер","по URL страницы",0,user,0,содержит,/tilda/form183623338/submitted
+laparoskopiya.ru,98919658,"Архив  Моб Форма2","по URL страницы",0,user,0,содержит,/tilda/form183639114/submitted
+laparoskopiya.ru,98919811,"Архив Моб Форма4","по URL страницы",0,user,0,содержит,/tilda/form183639573/submitted
+laparoskopiya.ru,98920063,"Архив  Моб Форма6","по URL страницы",0,user,0,содержит,/tilda/form183609523/submitted
+laparoskopiya.ru,98920081,"Архив  Моб Форма8","по URL страницы",0,user,0,содержит,/tilda/form183641227/submitted
+laparoskopiya.ru,41072473,"Архив Price","по URL страницы",0,user,0,содержит,/tilda/form66104283/submitted/
+laparoskopiya.ru,98920486,"Архив  Моб Форма12","по URL страницы",0,user,0,содержит,/tilda/form183643672/submitted
+laparoskopiya.ru,98920690,"Архив  Моб Форма14","по URL страницы",0,user,0,содержит,/tilda/form183636020/submitted
+laparoskopiya.ru,41072542,"Контакты: Связаться с нами","по URL страницы",1,user,200,содержит,/tilda/form65235045/submitted
+laparoskopiya.ru,227202427,"Узнать цену холецистэктомии из Статьи","по URL страницы",1,user,200,содержит,/tilda/form339765983/submitted
+laparoskopiya.ru,227202449,"Перезвоните мне. Ловец лидов","по URL страницы",1,user,385,содержит,/tilda/form346684300/submitted
+laparoskopiya.ru,98920174,"Архив Блок Цен: Узнать цены","по URL страницы",1,user,385,содержит,/tilda/form183643278/submitted
+laparoskopiya.ru,227202624,"Нет Roistat. Записаться на приём. Заявка из поп-апа - Header","по URL страницы",1,user,385,содержит,/tilda/form390355682/submitted
+laparoskopiya.ru,227202625,"Нет Roistat. Заявка на обратный звонок. Заявка из поп-апа - Header","по URL страницы",1,user,385,содержит,/tilda/form390355683/submitted
+laparoskopiya.ru,227202640,"Нет Roistat. Записаться на ОНЛАЙН консультацию. Из поп-апа - Header","по URL страницы",1,user,385,содержит,/tilda/form390355684/submitted
+laparoskopiya.ru,227202760,"Отправлен Отзыв со страницы Отзывов","по URL страницы",0,user,10,содержит,/tilda/form57429055/submitted
+laparoskopiya.ru,227202763,"Расскажите о проблеме хирургу. Страница Отзывов","по URL страницы",0,user,200,содержит,/tilda/form57427418/submitted
+laparoskopiya.ru,227202843,"Связаться с нами. Страница Отзывов","по URL страницы",0,user,200,содержит,/tilda/form57427420/submitted
+laparoskopiya.ru,227202646,"Нет Roistat. Узнать цену холецистэктомии из Статьи","по URL страницы",1,user,385,содержит,/tilda/form390355685/submitted
+laparoskopiya.ru,227202661,"Нет Roistat. Перезвоните мне. Ловец лидов","по URL страницы",1,user,385,содержит,/tilda/form390355686/submitted
+laparoskopiya.ru,227203209,"Онлайн запись на прием к врачу","по URL страницы",1,user,500,содержит,/tilda/form367810956/submitted
+laparoskopiya.ru,227203214,"Запись на прием. Новый ленд","по URL страницы",1,user,385,содержит,/tilda/form360197234/submitted
+laparoskopiya.ru,227203303,"Обратный звонок. Новый ленд","по URL страницы",1,user,385,содержит,/tilda/form360205615/submitted
+laparoskopiya.ru,227203304,"Запись на прием к Мударисову. Новый ленд","по URL страницы",1,user,500,содержит,/tilda/form360213201/submitted
+laparoskopiya.ru,227203308,"Запись на прием к Мнояну. Новый ленд","по URL страницы",1,user,385,содержит,/tilda/form360214697/submitted
+laparoskopiya.ru,227203309,"Запись на прием к Нагаеву. Новый ленд","по URL страницы",1,user,385,содержит,/tilda/form360227356/submitted
+laparoskopiya.ru,227203315,"Запись на прием к Старкову. Новый ленд","по URL страницы",1,user,385,содержит,/tilda/form391341788/submitted
+laparoskopiya.ru,227203329,"Уточнить цену. Блок цен. Новый ленд","по URL страницы",1,user,385,содержит,/tilda/form360228726/submitted
+gryzha-operaciya.ru,41183635,Звонок,звонок,1,auto,0
+gryzha-operaciya.ru,201676438,"Уникальный звонок","целевой звонок",0,auto,0
+gryzha-operaciya.ru,201676441,"Уникально-целевой звонок","целевой звонок",0,auto,0
+gryzha-operaciya.ru,201676444,"Целевой звонок","целевой звонок",0,auto,0
+gryzha-operaciya.ru,41203855,Отзыв,"по URL страницы",0,user,0,содержит,/tilda/form66646557/submitted/
+gryzha-operaciya.ru,41204089,"Связаться с нами","по URL страницы",0,user,0,содержит,/tilda/form66646564/submitted/
+gryzha-operaciya.ru,41204170,"Записаться на прием","по URL страницы",0,user,0,содержит,/tilda/form66646568/submitted/
+gryzha-operaciya.ru,41204194,Консультация,"по URL страницы",0,user,0,содержит,/tilda/form66646569/submitted/
+gryzha-operaciya.ru,42253690,"Все заявки с сайта","по URL страницы",1,user,0,содержит,/tilda/form
+gryzha-operaciya.ru,99427819,"Десктоп Хедер","по URL страницы",0,user,0,содержит,/tilda/form184560653/submitted
+gryzha-operaciya.ru,99428098,"Моб Хедер","по URL страницы",0,user,0,содержит,/tilda/form184560876/submitted
+gryzha-operaciya.ru,99428356,"Записаться Десктоп Форма1","по URL страницы",0,user,0,содержит,/tilda/form184562372/submitted
+gryzha-operaciya.ru,99428422,"Консультация Десктоп Форма2","по URL страницы",0,user,0,содержит,/tilda/form184562701/submitted
+gryzha-operaciya.ru,99428467,"Записаться Моб Форма3","по URL страницы",0,user,0,содержит,/tilda/form184587072/submitted
+gryzha-operaciya.ru,99428533,"Консультация Моб Форма4","по URL страницы",0,user,0,содержит,/tilda/form184587073/submitted
+gryzha-operaciya.ru,99428599,"Записаться Десктоп Форма5","по URL страницы",0,user,0,содержит,/tilda/form184587921/submitted
+gryzha-operaciya.ru,99428665,"Рассчитать Десктоп Форма6","по URL страницы",0,user,0,содержит,/tilda/form184563450/submitted
+gryzha-operaciya.ru,99428731,"Записаться Моб Форма7","по URL страницы",0,user,0,содержит,/tilda/form184588219/submitted
+gryzha-operaciya.ru,99428818,"Рассчитать Моб Форма8","по URL страницы",0,user,0,содержит,/tilda/form184588220/submitted
+gryzha-operaciya.ru,99428926,"Консультация Десктоп Форма9","по URL страницы",0,user,0,содержит,/tilda/form184589157/submitted
+gryzha-operaciya.ru,99429013,"Консультация Моб Форма10","по URL страницы",0,user,0,содержит,/tilda/form184589288/submitted
+gryzha-operaciya.ru,99429100,"Записаться Десктоп Форма11","по URL страницы",0,user,0,содержит,/tilda/form184589702/submitted
+gryzha-operaciya.ru,99429169,"Рассчитать Десктоп Форма12","по URL страницы",0,user,0,содержит,/tilda/form184589704/submitted
+gryzha-operaciya.ru,99429235,"Записаться Моб Форма13","по URL страницы",0,user,0,содержит,/tilda/form184589705/submitted
+gryzha-operaciya.ru,99429280,"Рассчитать Моб Форма14","по URL страницы",0,user,0,содержит,/tilda/form184589706/submitted
+gryzha-operaciya.ru,99429346,"Есть УЗИ Десктоп Форма15","по URL страницы",0,user,0,содержит,/tilda/form184591137/submitted
+gryzha-operaciya.ru,99429412,"Нет УЗИ Десктоп Форма16","по URL страницы",0,user,0,содержит,/tilda/form184563688/submitted
+gryzha-operaciya.ru,99429481,"Есть УЗИ Моб Форма17","по URL страницы",0,user,0,содержит,/tilda/form184591374/submitted
+gryzha-operaciya.ru,99429547,"Нет УЗИ Моб Форма18","по URL страницы",0,user,0,содержит,/tilda/form184591375/submitted
+gryzha-operaciya.ru,99429595,"Консультация Десктоп Форма19","по URL страницы",0,user,0,содержит,/tilda/form184591954/submitted
+gryzha-operaciya.ru,99429703,"Консультация Моб Форма20","по URL страницы",0,user,0,содержит,/tilda/form184592317/submitted
+gryzha-operaciya.ru,99429748,"Связаться Десктоп Форма21","по URL страницы",0,user,0,содержит,/tilda/form184593690/submitted
+gryzha-operaciya.ru,99429814,"Связаться Моб Форма22","по URL страницы",0,user,0,содержит,/tilda/form184593785/submitted
+gryzha-operaciya.ru,99429901,"Записаться Десктоп Форма23","по URL страницы",0,user,0,содержит,/tilda/form184594044/submitted
+gryzha-operaciya.ru,99430072,"Консультация Десктоп Форма24","по URL страницы",0,user,0,содержит,/tilda/form184594045/submitted
+gryzha-operaciya.ru,99430159,"Записаться Моб Форма25","по URL страницы",0,user,0,содержит,/tilda/form184594646/submitted
+gryzha-operaciya.ru,99430204,"Консультация Моб Форма26","по URL страницы",0,user,0,содержит,/tilda/form184594647/submitted
+gryzha-operaciya.ru,99430273,"Связаться Десктоп Футер","по URL страницы",0,user,0,содержит,/tilda/form71269784/submitted
+gryzha-operaciya.ru,99430339,"Связаться Моб Футер","по URL страницы",0,user,0,содержит,/tilda/form184565823/submitted
+gryzha-operaciya.ru,99430426,"Записаться Десктоп Футер","по URL страницы",0,user,0,содержит,/tilda/form72868013/submitted
+gryzha-operaciya.ru,99430498,"Консультация Десктоп Футер","по URL страницы",0,user,0,содержит,/tilda/form72891647/submitted
+gryzha-operaciya.ru,99430567,"Записаться Моб Футер","по URL страницы",0,user,0,содержит,/tilda/form184565140/submitted
+gryzha-operaciya.ru,99430633,"Консультация Моб Футер","по URL страницы",0,user,0,содержит,/tilda/form184565141/submitted
+gryzha-operaciya.ru,220049014,"CRMstat: Лид",JavaScript-событие,0,user,0,совпадает,crmstat-lead
+gryzha-operaciya.ru,220049017,"CRMstat: Продажа",JavaScript-событие,0,user,0,совпадает,crmstat-sale
+gryzha-operaciya.ru,227620827,"Автоцель: клик по номеру телефона","клик по номеру телефона",0,auto,0
+gryzha-operaciya.ru,227620828,"Автоцель: отправка формы","отправка формы",0,auto,0
+gryzha-operaciya.ru,227849871,"Автоцель: поиск по сайту","поиск по сайту",0,auto,0
+gryzha-operaciya.ru,227873943,"Автоцель Jivo: автоприглашение в чат",JavaScript-событие,0,auto,0,совпадает,Jivo_Proactive_invitation_accepted
+gryzha-operaciya.ru,227922427,"Автоцель Jivo: запуск чата клиентом",JavaScript-событие,0,auto,0,совпадает,Jivo_Client_initiate_chat
+gryzha-operaciya.ru,227922607,"Автоцель Jivo: офлайн-сообщение",JavaScript-событие,0,auto,0,совпадает,Jivo_Offline_message_sent
+gemioplastika.ru,67939861,"callme-header (до 18.11 десктоп)","по URL страницы",0,user,0,содержит,/tilda/form164339597/submitted
+gemioplastika.ru,201822073,"Уникальный звонок","целевой звонок",0,auto,0
+gemioplastika.ru,201822076,"Уникально-целевой звонок","целевой звонок",0,auto,0
+gemioplastika.ru,201822079,"Целевой звонок","целевой звонок",0,auto,0
+gemioplastika.ru,67940050,"callme-header моб до 18.11","по URL страницы",0,user,0,содержит,/tilda/form164340040/submitted
+gemioplastika.ru,67942003,"callme1 (до 18.11 десктоп)","по URL страницы",0,user,0,содержит,/tilda/form156404039/submitted
+gemioplastika.ru,67942015,"callme2 (до 18.11 десктоп)","по URL страницы",0,user,0,содержит,/tilda/form156404082/submitted
+gemioplastika.ru,67942018,"callme3 моб до 18.11","по URL страницы",0,user,0,содержит,/tilda/form156423470/submitted
+gemioplastika.ru,67942021,"callme4 моб до 18.11","по URL страницы",0,user,0,содержит,/tilda/form156423476/submitted
+gemioplastika.ru,67942027,"Получить бесплатную консультацию (до 18.11 десктоп)","по URL страницы",0,user,0,содержит,/tilda/form142859193/submitted
+gemioplastika.ru,67942039,"Получить бесплатную консультацию (моб) до 18.11","по URL страницы",0,user,0,содержит,/tilda/form142859190/submitted
+gemioplastika.ru,67942048,"Записаться на прием (до 18.11 десктоп)","по URL страницы",0,user,0,содержит,/tilda/form142859198/submitted
+gemioplastika.ru,67942051,"Записаться на прием моб до 18.11","по URL страницы",0,user,0,содержит,/tilda/form156426205/submitted
+gemioplastika.ru,67942057,"Записаться на консультацию (до 18.11 десктоп)","по URL страницы",0,user,0,содержит,/tilda/form142859210/submitted
+gemioplastika.ru,67942066,"Записаться на консультацию моб до 18.11","по URL страницы",0,user,0,содержит,/tilda/form156431416/submitted
+gemioplastika.ru,145151524,"Заявка из Контактов","по URL страницы",0,user,0,содержит,/tilda/form251617207/submitted
+gemioplastika.ru,67942090,"callme-footer (до 18.11 десктоп)","по URL страницы",0,user,0,содержит,/tilda/form163373940/submitted
+gemioplastika.ru,67942096,"callme-footer моб до 18.11","по URL страницы",0,user,0,содержит,/tilda/form164352995/submitted
+gemioplastika.ru,155853247,Звонок,звонок,0,auto,0
+gemioplastika.ru,227654006,"Автоцель: отправка формы","отправка формы",0,auto,0
+gemioplastika.ru,227758431,"Автоцель: клик по номеру телефона","клик по номеру телефона",0,auto,0
+gemioplastika.ru,227914670,"Автоцель Jivo: автоприглашение в чат",JavaScript-событие,0,auto,0,совпадает,Jivo_Proactive_invitation_accepted
+gemioplastika.ru,228091880,"Автоцель Jivo: запуск чата клиентом",JavaScript-событие,0,auto,0,совпадает,Jivo_Client_initiate_chat
+gemioplastika.ru,228202602,"Автоцель Jivo: офлайн-сообщение",JavaScript-событие,0,auto,0,совпадает,Jivo_Offline_message_sent
+gemioplastika.ru,228636782,"Автоцель: скачивание файла","скачивание файла",0,auto,0
+bezdiastaza.ru,68053081,"Десктоп Хедер","по URL страницы",0,user,0,содержит,/tilda/form164753660/submitted
+bezdiastaza.ru,201817600,"Уникальный звонок","целевой звонок",0,auto,0
+bezdiastaza.ru,201817603,"Уникально-целевой звонок","целевой звонок",0,auto,0
+bezdiastaza.ru,201817606,"Целевой звонок","целевой звонок",0,auto,0
+bezdiastaza.ru,68053108,"Моб Хедер","по URL страницы",0,user,0,содержит,/tilda/form164753661/submitted
+bezdiastaza.ru,68053129,"Десктоп Форма1","по URL страницы",0,user,0,содержит,/tilda/form164753338/submitted
+bezdiastaza.ru,68053147,"Десктоп Форма2","по URL страницы",0,user,0,содержит,/tilda/form164753339/submitted
+bezdiastaza.ru,68053162,"Моб Форма3","по URL страницы",0,user,0,содержит,/tilda/form164753340/submitted
+bezdiastaza.ru,68053174,"Моб Форма4","по URL страницы",0,user,0,содержит,/tilda/form164753341/submitted
+bezdiastaza.ru,68053201,"Десктоп Форма5","по URL страницы",0,user,0,содержит,/tilda/form156460485/submitted
+bezdiastaza.ru,68053207,"Моб Форма6","по URL страницы",0,user,0,содержит,/tilda/form164232311/submitted
+bezdiastaza.ru,68053219,"Десктоп Форма7","по URL страницы",0,user,0,содержит,/tilda/form156544632/submitted
+bezdiastaza.ru,68053222,"Моб Форма8","по URL страницы",0,user,0,содержит,/tilda/form164235959/submitted
+bezdiastaza.ru,68053225,"Десктоп Форма9","по URL страницы",0,user,0,содержит,/tilda/form157075276/submitted
+bezdiastaza.ru,68053228,"Моб Форма10","по URL страницы",0,user,0,содержит,/tilda/form164237265/submitted
+bezdiastaza.ru,68053231,"Десктоп Футер","по URL страницы",0,user,0,содержит,/tilda/form164244411/submitted
+bezdiastaza.ru,68053234,"Моб Футер","по URL страницы",0,user,0,содержит,/tilda/form164244502/submitted
+bezdiastaza.ru,155853235,Звонок,звонок,0,auto,0
+bezdiastaza.ru,227902285,"Автоцель Jivo: автоприглашение в чат",JavaScript-событие,0,auto,0,совпадает,Jivo_Proactive_invitation_accepted
+bezdiastaza.ru,227918407,"Автоцель: отправка формы","отправка формы",0,auto,0
+bezdiastaza.ru,228046445,"Автоцель: клик по номеру телефона","клик по номеру телефона",0,auto,0
+bezdiastaza.ru,228450822,"Автоцель Jivo: запуск чата клиентом",JavaScript-событие,0,auto,0,совпадает,Jivo_Client_initiate_chat
+bezdiastaza.ru,228450823,"Автоцель Jivo: офлайн-сообщение",JavaScript-событие,0,auto,0,совпадает,Jivo_Offline_message_sent
+klinikaboli.ru,36996581,Звонок,звонок,0,auto,0
+klinikaboli.ru,201649525,"Уникальный звонок","целевой звонок",0,auto,0
+klinikaboli.ru,201649528,"Уникально-целевой звонок","целевой звонок",0,auto,0
+klinikaboli.ru,201649531,"Целевой звонок","целевой звонок",0,auto,0
+klinikaboli.ru,39555217,"Обратный звонок","по URL страницы",0,user,0,содержит,/tilda/form43453901/submitted/
+klinikaboli.ru,39555247,"Оставьте номер врачи 1-ой Градской Форма 1","по URL страницы",0,user,0,содержит,/tilda/form42495716/submitted/
+klinikaboli.ru,39555292,"Оставьте ваш номер врачи 1-ой Градской Форма 2","по URL страницы",0,user,0,содержит,/tilda/form43476935/submitted/
+klinikaboli.ru,39555307,"Демократичные цены","по URL страницы",0,user,0,содержит,/tilda/form184372095/submitted/
+klinikaboli.ru,39555343,"Записаться на прием","по URL страницы",0,user,0,содержит,/tilda/form43556791/submitted/
+klinikaboli.ru,39555391,"Подвал Связаться с нами","по URL страницы",0,user,0,содержит,/tilda/form43661934/submitted/
+klinikaboli.ru,99357637,"Записаться Десктоп Хедер","по URL страницы",0,user,0,содержит,/tilda/form184460958/submitted/
+klinikaboli.ru,99357640,"Записаться Моб Хедер","по URL страницы",0,user,0,содержит,/tilda/form184461501/submitted/
+klinikaboli.ru,99357730,"Десктоп Форма1","по URL страницы",0,user,0,содержит,/tilda/form43453901/submitted/
+klinikaboli.ru,99357889,"Моб Форма2","по URL страницы",0,user,0,содержит,/tilda/form184468990/submitted/
+klinikaboli.ru,99357934,"Консультация Десктоп Форма3","по URL страницы",0,user,0,содержит,/tilda/form42495716/submitted/
+klinikaboli.ru,99358000,"Консультация Моб Форма4","по URL страницы",0,user,0,содержит,/tilda/form184472476/submitted/
+klinikaboli.ru,99358009,"Консультация Десктоп Форма5","по URL страницы",0,user,0,содержит,/tilda/form43476935/submitted/
+klinikaboli.ru,99358054,"Консультация Моб Форма6","по URL страницы",0,user,0,содержит,/tilda/form184473468/submitted/
+klinikaboli.ru,99358120,"Цены Десктоп Форма7","по URL страницы",0,user,0,содержит,/tilda/form184372095/submitted/
+klinikaboli.ru,99358123,"Цены Моб Форма8","по URL страницы",0,user,0,содержит,/tilda/form184474564/submitted/
+klinikaboli.ru,99358129,"Записаться Десктоп Форма9","по URL страницы",0,user,0,содержит,/tilda/form43556791/submitted/
+klinikaboli.ru,99358132,"Записаться Моб Форма10","по URL страницы",0,user,0,содержит,/tilda/form184475724/submitted/
+klinikaboli.ru,99358135,"Связаться Десктоп Форма11","по URL страницы",0,user,0,содержит,/tilda/form43661934/submitted/
+klinikaboli.ru,99358351,"Связаться Моб Форма12","по URL страницы",0,user,0,содержит,/tilda/form184478028/submitted/
+klinikaboli.ru,194997775,"Открытие Поп-апа с госпитализацией по боли","по URL страницы",0,user,0,содержит,/tilda/popup/rec326385938/opened
+klinikaboli.ru,194998219,"Заявка по Госпитализации: Головная боль","по URL страницы",0,user,0,содержит,/tilda/form326385938/submitted
+klinikaboli.ru,220049020,"CRMstat: Лид",JavaScript-событие,0,user,0,совпадает,crmstat-lead
+klinikaboli.ru,220049026,"CRMstat: Продажа",JavaScript-событие,0,user,0,совпадает,crmstat-sale
+klinikaboli.ru,227620808,"Автоцель: клик по номеру телефона","клик по номеру телефона",0,auto,0
+klinikaboli.ru,227620809,"Автоцель: отправка формы","отправка формы",0,auto,0
+klinikaboli.ru,227806322,"Автоцель: поиск по сайту","поиск по сайту",0,auto,0
+klinikaboli.ru,227883235,"Автоцель Jivo: автоприглашение в чат",JavaScript-событие,0,auto,0,совпадает,Jivo_Proactive_invitation_accepted
+klinikaboli.ru,227892295,"Автоцель Jivo: запуск чата клиентом",JavaScript-событие,0,auto,0,совпадает,Jivo_Client_initiate_chat
+klinikaboli.ru,227920652,"Автоцель Jivo: офлайн-сообщение",JavaScript-событие,0,auto,0,совпадает,Jivo_Offline_message_sent
+klinikaboli.ru,228295413,"Автоцель: скачивание файла","скачивание файла",0,auto,0
+port-sistema.ru,34983246,Звонок,звонок,1,auto,0
+port-sistema.ru,201596512,"Уникальный звонок","целевой звонок",0,auto,0
+port-sistema.ru,201596515,"Уникально-целевой звонок","целевой звонок",0,auto,0
+port-sistema.ru,201596518,"Целевой звонок","целевой звонок",0,auto,0
+port-sistema.ru,35395140,"Десктоп Форма1 - открытие","по URL страницы",0,user,0,содержит,/tilda/popup/rec39638482/opened
+port-sistema.ru,90729154,"Десктоп Форма1 - отправка","по URL страницы",0,user,0,содержит,/tilda/form39638482/submitted
+port-sistema.ru,90756340,"Моб Форма2","по URL страницы",0,user,0,содержит,/tilda/form170077730/submitted
+port-sistema.ru,90756370,"Десктоп Форма3","по URL страницы",0,user,0,содержит,/tilda/form170078149/submitted
+port-sistema.ru,90756397,"Моб Форма4","по URL страницы",0,user,0,содержит,/tilda/form170078346/submitted
+port-sistema.ru,39556741,"Десктоп Форма5 - отправка","по URL страницы",0,user,0,содержит,/tilda/form48738868/submitted/
+port-sistema.ru,90756553,"Моб Форма6","по URL страницы",0,user,0,содержит,/tilda/form170079134/submitted
+port-sistema.ru,90756784,"Десктоп Форма7","по URL страницы",0,user,0,содержит,/tilda/form170079296/submitted
+port-sistema.ru,90756808,"Моб Форма8","по URL страницы",0,user,0,содержит,/tilda/form170079631/submitted
+port-sistema.ru,39556765,"Десктоп Форма9","по URL страницы",0,user,0,содержит,/tilda/form48738992/submitted/
+port-sistema.ru,90756811,"Моб Форма10","по URL страницы",0,user,0,содержит,/tilda/form170080439/submitted
+port-sistema.ru,39556834,"Десктоп Форма11","по URL страницы",0,user,0,содержит,/tilda/form48257003/submitted
+port-sistema.ru,90756814,"Моб Форма12","по URL страницы",0,user,0,содержит,/tilda/form170082435/submitted
+port-sistema.ru,35401725,"Десктоп Форма13 - открытие","по URL страницы",0,user,0,содержит,tilda/popup/rec39638528/opened
+port-sistema.ru,35401404,"Десктоп Форма13 - отправка","по URL страницы",0,user,0,содержит,/tilda/form39638528/submitted
+port-sistema.ru,90756922,"Моб Форма14","по URL страницы",0,user,0,содержит,/tilda/form170083258/submitted
+port-sistema.ru,90756946,"Десктоп Форма15","по URL страницы",0,user,0,содержит,/tilda/form170083738/submitted
+port-sistema.ru,90756949,"Моб Форма16","по URL страницы",0,user,0,содержит,/tilda/form170083747/submitted
+port-sistema.ru,39556813,"#popup:comment - отправка формы","по URL страницы",0,user,0,содержит,/tilda/form39638522/submitted/
+port-sistema.ru,35393652,"Не найден Нажатие кнопки Roistat",JavaScript-событие,0,user,0,совпадает,PressRoistat
+port-sistema.ru,35401830,"Не найден #rec39638512 - отправка кнопки УСТАНОВКА","по URL страницы",0,user,0,содержит,tilda/form39638512/submitted/
+port-sistema.ru,133312171,"Любая форма","по URL страницы",0,user,0,содержит,/submitted/
+port-sistema.ru,220049047,"CRMstat: Лид",JavaScript-событие,0,user,0,совпадает,crmstat-lead
+port-sistema.ru,220049050,"CRMstat: Продажа",JavaScript-событие,0,user,0,совпадает,crmstat-sale
+port-sistema.ru,227765061,"Автоцель: отправка формы","отправка формы",0,auto,0
+port-sistema.ru,228044282,"Автоцель Jivo: запуск чата клиентом",JavaScript-событие,0,auto,0,совпадает,Jivo_Client_initiate_chat
+port-sistema.ru,228044283,"Автоцель Jivo: офлайн-сообщение",JavaScript-событие,0,auto,0,совпадает,Jivo_Offline_message_sent
+port-sistema.ru,228248151,"Автоцель Jivo: автоприглашение в чат",JavaScript-событие,0,auto,0,совпадает,Jivo_Proactive_invitation_accepted
+endometryoz.ru,98624821,"Десктоп Хедер","по URL страницы",0,user,0,содержит,/tilda/form169704999/submitted
+endometryoz.ru,201970867,"Уникальный звонок","целевой звонок",0,auto,0
+endometryoz.ru,201970870,"Уникально-целевой звонок","целевой звонок",0,auto,0
+endometryoz.ru,201970873,"Целевой звонок","целевой звонок",0,auto,0
+endometryoz.ru,98624824,"Моб Хедер","по URL страницы",0,user,0,содержит,/tilda/form169705001/submitted
+endometryoz.ru,98624827,"Десктоп Форма1","по URL страницы",0,user,0,содержит,/tilda/form169724398/submitted
+endometryoz.ru,98624833,"Десктоп Форма2","по URL страницы",0,user,0,содержит,/tilda/form169725019/submitted
+endometryoz.ru,98625052,"Моб Форма3","по URL страницы",0,user,0,содержит,/tilda/form169725157/submitted
+endometryoz.ru,98625058,"Моб Форма4","по URL страницы",0,user,0,содержит,/tilda/form169725261/submitted
+endometryoz.ru,98625091,"Десктоп Форма5","по URL страницы",0,user,0,содержит,/tilda/form164448755/submitted
+endometryoz.ru,98625121,"Моб Форма6","по URL страницы",0,user,0,содержит,/tilda/form169708809/submitted
+endometryoz.ru,98625124,"Десктоп Форма7","по URL страницы",0,user,0,содержит,/tilda/form165005510/submitted
+endometryoz.ru,98625127,"Моб Форма8","по URL страницы",0,user,0,содержит,/tilda/form169708527/submitted
+endometryoz.ru,98625130,"Десктоп Форма9","по URL страницы",0,user,0,содержит,/tilda/form169726567/submitted
+endometryoz.ru,98625157,"Десктоп Форма11","по URL страницы",0,user,0,содержит,/tilda/form165021593/submitted
+endometryoz.ru,98625247,"Моб Форма12","по URL страницы",0,user,0,содержит,/tilda/form169708337/submitted
+endometryoz.ru,98625253,"Десктоп Форма13","по URL страницы",0,user,0,содержит,/tilda/form169729768/submitted
+endometryoz.ru,98625256,"Моб Форма14","по URL страницы",0,user,0,содержит,/tilda/form169729823/submitted
+endometryoz.ru,98625262,"Десктоп Футер","по URL страницы",0,user,0,содержит,/tilda/form169710406/submitted
+endometryoz.ru,98625268,"Моб Футер","по URL страницы",0,user,0,содержит,/tilda/form169710595/submitted
+endometryoz.ru,98626753,"jivoSite - Отправил оффлайн-сообщение",JavaScript-событие,0,user,0,совпадает,Offline_message_sent
+endometryoz.ru,98626978,"jivoSite - Заполнил форму в окне чата",JavaScript-событие,0,user,0,совпадает,User_gave_contacts_during_chat
+endometryoz.ru,98627014,"jivoSite - Указал почту в специальном окне при ожидании ответа",JavaScript-событие,0,user,0,совпадает,In-chat_email_form_submitted
+endometryoz.ru,98627050,"jivoSite - Заказал обратный звонок",JavaScript-событие,0,user,0,содержит,Callback_requested
+endometryoz.ru,155853238,Звонок,звонок,0,auto,0
+endometryoz.ru,227618877,"Автоцель: отправка формы","отправка формы",0,auto,0
+endometryoz.ru,227926760,"Автоцель Jivo: запуск чата клиентом",JavaScript-событие,0,auto,0,совпадает,Jivo_Client_initiate_chat
+endometryoz.ru,227926761,"Автоцель Jivo: офлайн-сообщение",JavaScript-событие,0,auto,0,совпадает,Jivo_Offline_message_sent
+endometryoz.ru,228023780,"Автоцель Jivo: автоприглашение в чат",JavaScript-событие,0,auto,0,совпадает,Jivo_Proactive_invitation_accepted
+endometryoz.ru,228270314,"Автоцель: клик по email","клик по email",0,auto,0
+endometryoz.ru,228299605,"Автоцель: клик по номеру телефона","клик по номеру телефона",0,auto,0
+udalenie-zhelchnogo.ru,39412372,Звонок,звонок,0,auto,0
+udalenie-zhelchnogo.ru,201652021,"Уникальный звонок","целевой звонок",0,auto,0
+udalenie-zhelchnogo.ru,201652024,"Уникально-целевой звонок","целевой звонок",0,auto,0
+udalenie-zhelchnogo.ru,201652027,"Целевой звонок","целевой звонок",0,auto,0
+udalenie-zhelchnogo.ru,189769219,"Поп-ап ""Записаться на прием""",JavaScript-событие,0,user,500,совпадает,appointment
+udalenie-zhelchnogo.ru,189768865,"Первый экран ""Консультация хирурга""",JavaScript-событие,0,user,500,совпадает,consult
+udalenie-zhelchnogo.ru,189769291,"Главная ""Узнайте цену операции""",JavaScript-событие,0,user,500,совпадает,mainpage_cta_price
+udalenie-zhelchnogo.ru,189769321,"Главная ""Бесплатная консультация""",JavaScript-событие,0,user,500,совпадает,mainpage_cta_free_consult
+udalenie-zhelchnogo.ru,189769225,"Контакты ""Связаться с нами""",JavaScript-событие,0,user,500,совпадает,contacts
+udalenie-zhelchnogo.ru,189769384,"Прайс ""Узнайте цену операции""",JavaScript-событие,0,user,500,совпадает,pricepage_cta_price
+udalenie-zhelchnogo.ru,39557029,"Задать вопрос врачу","по URL страницы",0,user,0,содержит,/tilda/form56468269/submitted/
+udalenie-zhelchnogo.ru,39557068,"Консультация хирурга","по URL страницы",0,user,0,содержит,/tilda/form56468285/submitted/
+udalenie-zhelchnogo.ru,39557104,"Оставить отзыв","по URL страницы",0,user,0,содержит,/tilda/form56468354/submitted/
+udalenie-zhelchnogo.ru,39557110,"Записаться на прием в ЦЛХ","по URL страницы",0,user,0,содержит,/tilda/form57220062/submitted/
+udalenie-zhelchnogo.ru,39557122,"Подвал Связаться с нами","по URL страницы",0,user,0,содержит,/tilda/form56468364/submitted/
+udalenie-zhelchnogo.ru,39574819,"Узнать цены на главной","по URL страницы",0,user,0,содержит,/tilda/form59167144/submitted/
+udalenie-zhelchnogo.ru,39576223,"Узнать цены - прайс","по URL страницы",0,user,0,содержит,/tilda/form57415894/submitted/
+udalenie-zhelchnogo.ru,39576262,"Консультация хирурга - отзывы","по URL страницы",0,user,0,содержит,/tilda/form57427418/submitted/
+udalenie-zhelchnogo.ru,98963722,"Десктоп Хедер","по URL страницы",0,user,0,содержит,/tilda/form183673973/submitted
+udalenie-zhelchnogo.ru,98963728,"Моб Хедер","по URL страницы",0,user,0,содержит,/tilda/form183674365/submitted
+udalenie-zhelchnogo.ru,98963746,"Консультация хирурга Десктоп Форма1","по URL страницы",0,user,0,содержит,/tilda/form183701546/submitted
+udalenie-zhelchnogo.ru,98963752,"Консультация Десктоп Форма2","по URL страницы",0,user,0,содержит,/tilda/form183678965/submitted
+udalenie-zhelchnogo.ru,98963758,"Консультация Моб Форма3","по URL страницы",0,user,0,содержит,/tilda/form183703462/submitted
+udalenie-zhelchnogo.ru,98963767,"Узнайте цену операции Десктоп Форма4","по URL страницы",0,user,0,содержит,/tilda/form59167144/submitted
+udalenie-zhelchnogo.ru,98963770,"Узнайте цену операции Моб Форма5","по URL страницы",0,user,0,содержит,/tilda/form183702990/submitted
+udalenie-zhelchnogo.ru,98963773,"Бесплатная консультация Десктоп Форма6","по URL страницы",0,user,0,содержит,/tilda/form57220062/submitted
+udalenie-zhelchnogo.ru,98963776,"Бесплатная консультация Моб Форма7","по URL страницы",0,user,0,содержит,/tilda/form183700048/submitted
+udalenie-zhelchnogo.ru,98963779,"Связаться с нами Десктоп Форма8","по URL страницы",0,user,0,содержит,/tilda/form183676218/submitted
+udalenie-zhelchnogo.ru,98963887,"Связаться с нами Моб Форма9","по URL страницы",0,user,0,содержит,/tilda/form183697778/submitted
+udalenie-zhelchnogo.ru,98963890,"Узнать цены - Прайс Десктоп","по URL страницы",0,user,0,содержит,/tilda/form57415894/submitted
+udalenie-zhelchnogo.ru,98963893,"Узнать цены - Прайс Моб","по URL страницы",0,user,0,содержит,/tilda/form183707881/submitted
+udalenie-zhelchnogo.ru,98963902,"Связаться с нами - Прайс Десктоп","по URL страницы",0,user,0,содержит,/tilda/form183708314/submitted
+udalenie-zhelchnogo.ru,98963905,"Связаться с нами - Прайс Моб","по URL страницы",0,user,0,содержит,/tilda/form183709122/submitted
+udalenie-zhelchnogo.ru,192013729,"Автоцель: отправка формы","отправка формы",0,auto,0
+udalenie-zhelchnogo.ru,192512200,"Автоцель: клик по номеру телефона","клик по номеру телефона",0,auto,0
+udalenie-zhelchnogo.ru,220049053,"CRMstat: Лид",JavaScript-событие,0,user,0,совпадает,crmstat-lead
+udalenie-zhelchnogo.ru,220049056,"CRMstat: Продажа",JavaScript-событие,0,user,0,совпадает,crmstat-sale
+udalenie-zhelchnogo.ru,228611699,"Автоцель Jivo: автоприглашение в чат",JavaScript-событие,0,auto,0,совпадает,Jivo_Proactive_invitation_accepted
+laparoscope.ru,159896260,"Записаться на приём. Хедер","по URL страницы",1,user,500,содержит,/tilda/form169743178/submitted
+laparoscope.ru,159896275,"Перезвоните мне. Хедер","по URL страницы",1,user,500,содержит,/tilda/form162669305/submitted
+laparoscope.ru,159896302,"Получить бесплатную консультацию. Первый экран","по URL страницы",1,user,500,содержит,/tilda/form169768843/submitted
+laparoscope.ru,159896305,"Запишитесь на консультацию с врачом. Верхняя","по URL страницы",1,user,300,содержит,/tilda/form162392263/submitted
+laparoscope.ru,159896323,"Запишитесь на консультацию с врачом. Средняя","по URL страницы",1,user,300,содержит,/tilda/form162567342/submitted
+laparoscope.ru,159896353,"Запишитесь на консультацию с врачом. Нижняя","по URL страницы",1,user,300,содержит,/tilda/form162661473/submitted
+laparoscope.ru,159896596,"Связаться с нами. Контакты","по URL страницы",1,user,300,содержит,/tilda/form169769777/submitted
+laparoscope.ru,159896671,"Перезвоните мне. Футер","по URL страницы",1,user,200,содержит,/tilda/form169743831/submitted
+laparoscope.ru,159896731,"Отправка документов врачу","по URL страницы",1,user,100,содержит,/tilda/form281414539/submitted
+paingkb.ru,34983243,Звонок,звонок,0,auto,0
+paingkb.ru,201585520,"Уникальный звонок","целевой звонок",0,auto,0
+paingkb.ru,201585523,"Уникально-целевой звонок","целевой звонок",0,auto,0
+paingkb.ru,201585526,"Целевой звонок","целевой звонок",0,auto,0
+paingkb.ru,35281671,"Вызов формы 1",JavaScript-событие,0,user,0,совпадает,orderSend1
+paingkb.ru,35281674,"Вызов формы 2",JavaScript-событие,0,user,0,совпадает,orderSend2
+paingkb.ru,35281704,"Вызов формы 3",JavaScript-событие,0,user,0,совпадает,orderSend3
+paingkb.ru,35281722,"Вызов формы 4",JavaScript-событие,0,user,0,совпадает,orderSend4
+paingkb.ru,35282679,"Вызов формы 5",JavaScript-событие,0,user,0,совпадает,orderSend5
+paingkb.ru,35282685,"Вызов формы 6",JavaScript-событие,0,user,0,совпадает,orderSend6
+paingkb.ru,35282691,"Вызов формы 7",JavaScript-событие,0,user,0,совпадает,orderSend7
+paingkb.ru,35393463,"Нажатие кнопки Roistat",JavaScript-событие,0,user,0,совпадает,PressRoistat
+paingkb.ru,228265216,"Автоцель Jivo: запуск чата клиентом",JavaScript-событие,0,auto,0,совпадает,Jivo_Client_initiate_chat
+paingkb.ru,228265217,"Автоцель Jivo: офлайн-сообщение",JavaScript-событие,0,auto,0,совпадает,Jivo_Offline_message_sent
+paingkb.ru,228543842,"Автоцель Jivo: автоприглашение в чат",JavaScript-событие,0,auto,0,совпадает,Jivo_Proactive_invitation_accepted
+udalenie-gemorroya.ru,45635715,myform,"по URL страницы",0,user,0,содержит,/tilda/form84311720/submitted/
+udalenie-gemorroya.ru,201724969,"Уникальный звонок","целевой звонок",0,auto,0
+udalenie-gemorroya.ru,201724972,"Уникально-целевой звонок","целевой звонок",0,auto,0
+udalenie-gemorroya.ru,201724975,"Целевой звонок","целевой звонок",0,auto,0
+udalenie-gemorroya.ru,45635724,udalenie,"по URL страницы",0,user,0,содержит,/tilda/form85340637/submitted/
+udalenie-gemorroya.ru,45635742,myform2,"по URL страницы",0,user,0,содержит,/tilda/form84311758/submitted/
+udalenie-gemorroya.ru,45635790,price,"по URL страницы",0,user,0,содержит,/tilda/form85340544/submitted/
+udalenie-gemorroya.ru,45635835,appointment,"по URL страницы",0,user,0,содержит,tilda/form84033903/submitted
+udalenie-gemorroya.ru,45635940,otzyv,"по URL страницы",0,user,0,содержит,/tilda/form84039967/submitted/
+udalenie-gemorroya.ru,45652593,Звонок,звонок,0,auto,0
+udalenie-gemorroya.ru,220049059,"CRMstat: Лид",JavaScript-событие,0,user,0,совпадает,crmstat-lead
+udalenie-gemorroya.ru,220049062,"CRMstat: Продажа",JavaScript-событие,0,user,0,совпадает,crmstat-sale
+k31orto.ru,38836106,Звонок,звонок,0,auto,0
+k31orto.ru,201638824,"Уникальный звонок","целевой звонок",0,auto,0
+k31orto.ru,201638827,"Уникально-целевой звонок","целевой звонок",0,auto,0
+k31orto.ru,201638830,"Целевой звонок","целевой звонок",0,auto,0
+k31orto.ru,227620817,"Автоцель: отправка формы","отправка формы",0,auto,0
+k31orto.ru,228105846,"Автоцель: клик по номеру телефона","клик по номеру телефона",0,auto,0

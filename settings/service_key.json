@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "gsheet-api-for-rpm-analytics",
+  "private_key_id": "a8e5909de27214207b16eaefbc853d77e7e2a9f8",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDV/1R7Z3OjzGrj\n6IwW9MnOWoLAG1KBHZEXq2w9M0RaNcu8vfL6Kp1yrRXV8Ci1Ucxi2BZabZbXTRwC\nqUvNqNaENmHv9sojn+6oK7ZlSMrC5HiLS+UyVByx2ZSixOY2WIkQZuDhZ7t9LsPC\nyGgGuFaKPneL4pLveWl0FqBBcHwgDNR6ZkgfmgFyGwebkR9aK6NSGvlpjjmdLDtX\nlaSvLT5iSQCS9DzYaS4YjjsO2lICa6NxM7JaAJFFiWdmh5zJVHjdGIusmH3ElCNZ\nZUjvWRzw0twEZdSdCIpGzeqGnLNG+iD8OuBiFJzkMk7TyuCCDXKttQQDLV759wV+\nIIOwjFVnAgMBAAECggEAGOUm0WJkGr/1sW+Ew0jqpJXKqd75K/8iDtReTQexTHiq\nAS+XMZDn7IbZSEsI7qsbnBDSbOZcis3e09UZIKL4gxIGi7w0oOICtCVoXIO+3t8Q\nbPgWgP01sgpYwc975AJMaRA8L3d6DCKhcIAQULPSPCvvNrf+6wVqBgYkfOhr8EMH\nPniGm90+w2KPnnDj3g8/SuAPe53XHd3KlGkQlOfCV1SBx0SQu7Wj9OVVE7dFFnMF\nFPh2Kw82biR+SO8xbKU6AlhNFOFM6ANKFbn1+RTt67PBofjndpW3MXAlqygm4WXL\ncRVOY6McuaPEX4uE4YDB+kAzWlylcOQfufVQEEoP0QKBgQD7RBDUeF8qylhkBCrX\ncbNBtsB2ZI4zPE4h/Uu16iHeeEVs42uw0QoESdAmDOmqjhjMCYwTTEYaLKNTG7Yl\nkkteizG1EJsO2tfJ3MoJ30E5BmH+LD5kpBysgeHxEX5+8ncq8KryHF3VB4Dv0BaM\ntGZVCFZTeSgaZQq/3lhe23z+UQKBgQDaB4Gv97Vre6Je+GHPcfL/9xNFVPLFUh0G\nZDYwfjIez2AYjEhGLbGEgS+KiFgw73n4IzvSZf8MKHErr91bWeO0G5i5DhtboQoj\nvWupEL7qZE3j2NdVwRwRjTpOmYQwZPEcmJ5KqC4GQG9VyAkKRgpA/Gb3816sqMsC\ncyDLDdASNwKBgQDY4BRCwC8saQDIO0ybLvmRc+NFjV+r25Z5Af9yYkeflWIfLWDL\nenLR5sAxx518aDABFRCBq6kqeHL0jgu2/EHvtedOqKmdtcjh5J/Cy5+pT9gPIjMs\nfPZ+85CImhf8DN5NAvQaC9/1uwdQduSvyBo3tP2GCSJTPfl8SLcwEPUfMQKBgCfY\nYVoQUgZvlM/4Yp+vunIO7GWqTafEBuvpGoIoPe6lhXFXCcpRhXSqy05s9nkS+t5f\nSgp8e2z0YyJRxIlyVwvOU03WhydqudioQGmoVsutQxLVyRyx6vhGMBa3NZJGkE3i\nkmMgczDPS8mIgiZvgGY5+nNr9axmOJudAKw7PQBnAoGAYlSuB2Qykej4ro8FbDnC\neqHI22/s3NrWcM0Ephqbnu55voVWW+0PS4BnGlb0HE8qyKguZ2OINrGHT9ap9iCY\nXVbrOuKqccC/Qz+W24Nl2P/K2wtjSv5ViA9i/GL6/unkiNSk/721/fH2Btq9MV7P\nDiWinvEqn9sZBYrDxaua08E=\n-----END PRIVATE KEY-----\n",
+  "client_email": "service@gsheet-api-for-rpm-analytics.iam.gserviceaccount.com",
+  "client_id": "110553948314871416686",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/service%40gsheet-api-for-rpm-analytics.iam.gserviceaccount.com"
+}
