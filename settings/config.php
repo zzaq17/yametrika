@@ -26,7 +26,6 @@ $counterIDs = [
 $reports = [
 	'goals' => 'goals',
 	'goal' => 'goal',
-
 ];
 
 $goalTypes = [
