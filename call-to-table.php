@@ -1,16 +1,19 @@
 <?php
 require_once 'settings/config.php';
 require_once 'settings/gsheet-auth.php';
-require_once 'bot/rpm-leads-bot.php';
+// require_once 'bot/rpm-leads-bot.php';
 
 	// Получаем данные звонка
+		// $json = '{"id":"19808","caller":"79601144551","callee":"74999554025","visit_id":null,"marker":"registraciyaznaka.ru","order_id":null,"date":"2022-01-26 19:01:04"}';
+		// $data = json_decode(trim($json), true);
 		$data = json_decode(trim(file_get_contents('php://input')), true);
-		if($input_array){
 			// логируем на сервер
-			file_put_contents('webhook-log.txt', "id {$data['id']} {$data['date']}: {$data['caller']} -> {$data['callee']}\n", FILE_APPEND); 
+		$nowdate = date("d.m.Y H:i");
+		file_put_contents('webhook-log.txt', "id {$data['id']} {$nowdate}: {$data['caller']} -> {$data['callee']}\n", FILE_APPEND); 
 
 	// Отправляем в Gsheet
-			$forsending = [['Новая','',$data['caller'],$data['date'],'','',$data['id'],'zvonok',$data['marker']]];
+			$forsending = [['Новая','',$data['caller'],$nowdate,'','',$data['id'],'zvonok','https://' . $data['marker']]];
+				print_r($forsending);
 			$crm_id = '1hzXUjuj9xpqhlnC1G-NcJ6vAxT7Jln3os5tBbjay5k0';
 			$ValueRange = new Google_Service_Sheets_ValueRange(['values' => $forsending]);
 			$options = ['valueInputOption' => 'RAW'];
@@ -56,22 +59,27 @@ require_once 'bot/rpm-leads-bot.php';
 			// 'Reply-To: '.$recepient.'' . PHP_EOL;
 			// // отправляем email
 			// mail($to, $subject, $message, $headers);
+		
+	// 	if($data){
+		// // Отправляем в Telegram
+		// 		$leadText = '';
+		// 		$arr = array(
+		// 			'Телефон: ' => $data['caller'],
+		// 			'Дата заявки: ' => $data['date'],
+		// 			'Страница: ' => $data['marker'],
+		// 		);
 
-		// Отправляем в Telegram
-			$leadText = '';
-			$arr = array(
-				'Телефон: ' => $data['caller'],
-				'Дата заявки: ' => $data['date'],
-				'Страница: ' => $data['marker'],
-			);
+		// 		$leadText = "<b>Заявка от RPM</b>%0A";
+		// 		foreach($arr as $key => $value) {
+		// 			$txt .= "<b>".$key."</b> ".$value."%0A";
+		// 		};
+		// 		sendLead($chat_id, $leadText);
 
-			$leadText = "<b>Заявка от RPM</b>%0A";
-			foreach($arr as $key => $value) {
-				$txt .= "<b>".$key."</b> ".$value."%0A";
-			};
-			sendLead($chat_id, $leadText);
+		// 	}
+		// 	else {
+		// 		print("It's nothing ro send");
+		// 	}
 
-		}
-		else {
-			print("It's nothing ro send");
-		}
+			
+
+		
