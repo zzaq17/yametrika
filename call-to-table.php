@@ -2,17 +2,22 @@
 require_once 'settings/config.php';
 require_once 'settings/gsheet-auth.php';
 // require_once 'bot/rpm-leads-bot.php';
-
-	// Получаем данные звонка
+		// Отладка
 		// $json = '{"id":"19808","caller":"79601144551","callee":"74999554025","visit_id":null,"marker":"registraciyaznaka.ru","order_id":null,"date":"2022-01-26 19:01:04"}';
 		// $data = json_decode(trim($json), true);
+	// Получаем данные звонка
 		$data = json_decode(trim(file_get_contents('php://input')), true);
 			// логируем на сервер
 		$nowdate = date("d.m.Y H:i");
-		file_put_contents('webhook-log.txt', "id {$data['id']} {$nowdate}: {$data['caller']} -> {$data['callee']}\n", FILE_APPEND); 
+		$normCaller = trim($data['caller']);
+		if ($normCaller[0] == 7) {
+			$normCaller = "+" . $normCaller[0] . ' ('.$normCaller[1].$normCaller[2].$normCaller[3].') '.$normCaller[4].$normCaller[5].$normCaller[6].'-'.$normCaller[7].$normCaller[8].'-'.$normCaller[9].$normCaller[10].'';
+		}
+
+			file_put_contents('webhook-log.txt', "id {$data['id']} {$nowdate}: {$normCaller} -> {$data['callee']}\n", FILE_APPEND); 
 
 	// Отправляем в Gsheet
-			$forsending = [['Новая','',$data['caller'],$nowdate,'','',$data['id'],'zvonok','https://' . $data['marker']]];
+			$forsending = [['Новая','',$normCaller,$nowdate,'','',$data['id'],'zvonok','https://' . $data['marker']]];
 				print_r($forsending);
 			$crm_id = '1hzXUjuj9xpqhlnC1G-NcJ6vAxT7Jln3os5tBbjay5k0';
 			$ValueRange = new Google_Service_Sheets_ValueRange(['values' => $forsending]);
