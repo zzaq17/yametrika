@@ -33,18 +33,18 @@
 			// запрос 1 - выставляем кодировку
 			$sql .= 'SET NAMES utf8;';
 			// запрос 2 - добавляем юзера в базу
-			$sql .= 'INSERT IGNORE INTO MYTABLE (user_id, first_name) VALUES("'.$user_id.'", "'.$fname.'");';
+			$sql .= 'INSERT IGNORE INTO chatbot (user_id, first_name) VALUES("'.$user_id.'", "'.$fname.'");';
 			// запрос 3 - обновляем данные юзера в базе
-			$sql .= 'UPDATE IGNORE MYTABLE SET first_name="'.$fname.'", last_name="'.$lname.'", nick_name="'.$uname.'" WHERE user_id="'.$user_id.'";';
+			$sql .= 'UPDATE IGNORE chatbot SET first_name="'.$fname.'", last_name="'.$lname.'", nick_name="'.$uname.'" WHERE user_id="'.$user_id.'";';
 			// запрос 4 - запрос на поиск юзера в базе
-			$sql .= 'SELECT status FROM MYTABLE WHERE user_id="'.$user_id.'";';
+			$sql .= 'SELECT status FROM chatbot WHERE user_id="'.$user_id.'";';
 			
 			if (!$mysqli->multi_query($sql)) {    // пытаемся выполнить мультизапрос
 					sendMessage($admin_chat_id,'Не удалось выполнить мультизапрос ('.$mysqli->errno.': '.$mysqli->error.') для пользователя с user_id: '.$user_id);
 					exit();    // подключение отвалится само при завершении скрипта
 			}
 			
-			$status = NULL;    // вначале статус юзера нам неизвестен
+			$status = 1;    // вначале статус юзера нам неизвестен
 			$counter = 0;      // инициализируем счётчик обрабатываемых результатов
 			do {    $counter += 1;                      // увеличиваем счётчик
 							$res = $mysqli->store_result();     // получаем результат i-того запроса
@@ -68,8 +68,9 @@
 					exit();
 			}
 			elseif(!$status){    // если статус юзера равен нулю (юзер забанен)
-					sendMessage($chat_id,'Для Вас заблокирована возможность посылать сообщения роботу @BOTNAME');
+					sendMessage($chat_id,'Для Вас заблокирована возможность посылать сообщения роботу @RPMGroup_bot');
 					exit();
+			}
 			// начинаем распарсивать полученное сообщение
 				$command = '';          // команды нет
 				$user_chat_id = '';     // адресат не определён
@@ -145,7 +146,7 @@
 														exit();
 												}
 												// формируем запрос на обновление статуса указанного юзера в базе (меняем его на 0)
-												$sql = 'UPDATE IGNORE MYTABLE SET status="0" WHERE user_id="'.$user_chat_id.'";';
+												$sql = 'UPDATE IGNORE chatbot SET status="0" WHERE user_id="'.$user_chat_id.'";';
 												if (!$mysqli->multi_query($sql)) {  // пытаемся выполнить мультизапрос
 														sendMessage($admin_chat_id,'Не удалось добавить в бан пользователя c user_id = '.$user_chat_id);
 														exit();                         // подключение отвалится само при завершении скрипта
@@ -170,7 +171,7 @@
 												exit();
 										}
 										// формируем запрос на обновление статуса юзера в базе (меняем его на 1)
-										$sql = 'UPDATE IGNORE MYTABLE SET status="1" WHERE user_id="'.$user_chat_id.'";';
+										$sql = 'UPDATE IGNORE chatbot SET status="1" WHERE user_id="'.$user_chat_id.'";';
 										if (!$mysqli->multi_query($sql)) {      // пытаемся выполнить мультизапрос
 												sendMessage($admin_chat_id,'Не удалось выполнить отмену бана пользователя c user_id = '.$user_chat_id);
 												exit();
@@ -187,6 +188,7 @@
 						break;
 				}
 		}
+	// }
 		else {
 			print("Hello, I am bot! My name is @RPMGroup_bot & I'm whatching you)))\n");
 		}
@@ -194,6 +196,10 @@
 			function sendMessage($var_chat_id,$var_message){
 					file_get_contents($GLOBALS['bot_api'].'/sendMessage?chat_id='.$var_chat_id.'&text='.urlencode($var_message));
 			}
+			/* Функция отправки сообщения в чат с использованием метода sendMessage*/
+			function sendLead($var_chat_id,$var_lead){
+					file_get_contents($GLOBALS['bot_api'].'/sendMessage?chat_id='.$var_chat_id.'&text='.urlencode($var_lead));
+			}
 					// 'https://api.telegram.org/bot5101978790:AAHkRI1KXylf_-9wkjjwBS5SvtkefOGuZqI/setWebhook?url=https://webhook.testboxe.ru/bot/rpm-leads-bot.php'
 
-
+		
