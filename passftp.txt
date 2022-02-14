@@ -1,3 +1,7 @@
 rpmgroup.beget.tech
 rpmgroup_zzaq
 G9iMia&0
+
+// API KEY
+// a8e5909de27214207b16eaefbc853d77e7e2a9f8
+// service@gsheet-api-for-rpm-analytics.iam.gserviceaccount.com

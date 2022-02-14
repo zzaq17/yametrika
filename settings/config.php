@@ -54,7 +54,3 @@ $goalCondsTypes = [
 
 
 $gsheetID = '1mcLor5uxdnlowPvLAVSWGl_MiSuD76bb4UZ8JC98RbI';
-
-// API KEY
-// a8e5909de27214207b16eaefbc853d77e7e2a9f8
-// service@gsheet-api-for-rpm-analytics.iam.gserviceaccount.com
