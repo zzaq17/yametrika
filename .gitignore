@@ -17,4 +17,4 @@ tilda.html
 # Папка с собранными файлами проекта
 build/
 datasave/
-settings/service_key.json
+/settings/service_key.json
