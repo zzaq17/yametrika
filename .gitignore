@@ -5,15 +5,16 @@ Thumbs.db
 # Файлы редактора
 .idea
 *.sublime*
-.vscode
+.vscode/
 
 # Вспомогательные файлы
 *.log*
 node_modules/
 vendor/
-passftp.txt
+*.txt
 tilda.html
 
 # Папка с собранными файлами проекта
 build/
 datasave/
+settings/service_key.json
