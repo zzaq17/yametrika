@@ -1,6 +1,6 @@
 <?php 
 
-require 'vendor/autoload.php';
+require '../../vendor/autoload.php';
 
 $today = date('d.m.y');
 $now = date('d.m.y_H.m.s');
