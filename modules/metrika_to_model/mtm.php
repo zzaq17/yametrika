@@ -35,7 +35,7 @@ $sort= 			'ym:s:date,-ym:s:visits';
 		return [$data, $query];
 	}
 
-	[$data, $query] = sendRequest($date1,$date2,$group,$metrics,$dimensions,$sort);
+	// [$data, $query] = sendRequest($date1,$date2,$group,$metrics,$dimensions,$sort);
 
 
 // очистка всех заголовков в первой строке таблицы
@@ -61,7 +61,7 @@ $sort= 			'ym:s:date,-ym:s:visits';
 		return $result;
 	}
 	
-	clearTable($service, $spreadsheetId);
+	// clearTable($service, $spreadsheetId);
 
 
 // обновить Заголовки в таблице Заголовками из query ответа
@@ -81,7 +81,7 @@ $sort= 			'ym:s:date,-ym:s:visits';
 		return $result;
 	}
 
-	updateHeaders($query, $service, $spreadsheetId);
+	// updateHeaders($query, $service, $spreadsheetId);
 
 
 // Функция замены строк отчета
@@ -115,13 +115,13 @@ $sort= 			'ym:s:date,-ym:s:visits';
 		return $result;
 	}
 
-updateRows($data, $service, $spreadsheetId);
+// updateRows($data, $service, $spreadsheetId);
 
 
 // Функция обновления строк отчета
 function appendRows($data, $service, $spreadsheetId) {
 	foreach ($data as $val) {
-		$date = date('d.m.y',strtotime($val->dimensions[0]->name));
+		$date = date('Y-m-d',strtotime($val->dimensions[0]->name));
 		$domain = $val->dimensions[1]->name;
 		// $url = $val->dimensions[2]->name;
 		$visits = (int) $val->metrics[0];

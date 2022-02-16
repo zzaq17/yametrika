@@ -28,15 +28,16 @@ clearTable($service, $spreadsheetId);
 		print_r($date1);
 		print_r('<br>Первая Date2: ');
 		print_r($date2);
-		$today = new DateTime('2022-02-15', new DateTimeZone('Europe/Moscow'));
+		$today = new DateTime();
+		$yesterday = date_sub($today, date_interval_create_from_date_string('1 day'));
 		print_r('<br>ДО: ');
-		print_r(date_format($today, 'Y-m-d H:i'));
+		print_r(date_format($yesterday, 'Y-m-d H:i'));
 		print_r('<br>');
 		
-		while ($date < $today) {
+		while ($date < $yesterday) {
 			[$data, $query] = sendRequest($date1,$date2,$group,$metrics,$dimensions,$sort);
 			foreach ($data as $val) {
-				$dimdate = date('d.m.Y',strtotime($val->dimensions[0]->name));
+				$dimdate = date('Y-m-d',strtotime($val->dimensions[0]->name));
 				$domain = $val->dimensions[1]->name;
 				$visits = (int) $val->metrics[0];
 				$users = (int) $val->metrics[1];
