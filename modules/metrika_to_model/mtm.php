@@ -8,7 +8,7 @@ $spreadsheetId = '1dQgxqMHVwApxEp1ZqcODMlXgX3UmKzoBsh_RTuHt6Ss';
 
 // Настройки запроса к Метрике
 $date1 = 		'2020-01-01';
-$date2 = 		'2020-04-30';
+$date2 = 		'2020-01-20';
 $group = 		'day';
 $metrics= 	'ym:s:visits,ym:s:users,ym:s:pageDepth,ym:s:bounceRate';
 $dimensions='ym:s:date,ym:s:startURLDomain';
