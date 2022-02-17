@@ -21,6 +21,10 @@ class ComposerStaticInitc1149a678dacae62eb17f567069c1433
         array (
             'phpseclib3\\' => 11,
         ),
+        'Z' => 
+        array (
+            'Zzaq\\Yametrika\\' => 15,
+        ),
         'P' => 
         array (
             'Psr\\Log\\' => 8,
@@ -52,6 +56,10 @@ class ComposerStaticInitc1149a678dacae62eb17f567069c1433
         'phpseclib3\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib',
+        ),
+        'Zzaq\\Yametrika\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
         ),
         'Psr\\Log\\' => 
         array (

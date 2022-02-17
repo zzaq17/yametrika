@@ -1,5 +1,17 @@
 {
-    "require": {
-        "google/apiclient": "^2.0"
-    }
+    "name": "zzaq/yametrika",
+    "description": "iption []: some scripts for RPM analytics",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Zzaq\\Yametrika\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Andrey Zakharov",
+            "email": "az917r@gmail.com"
+        }
+    ],
+    "require": {}
 }
