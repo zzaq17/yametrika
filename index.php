@@ -28,7 +28,7 @@
 			<div class="description">
 				<p>Обновить таблицу GSheet</p>
 			</div>
-			<a href="gsheets.php">
+			<a href="modules/forms_goals_extractions/gsheets.php">
 				<button id="gsheet-script" class="btn">Старт!</button>
 			</a>
 			<div class="ready-gsheet"></div>

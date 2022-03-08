@@ -40,7 +40,7 @@ $sort= 			'ym:s:date,-ym:s:visits';
 
 // очистка всех заголовков в первой строке таблицы
 	function clearHeaders($service, $spreadsheetId) {
-			$list = "'Выгрузка всех визитов'!";
+			$list = "'visits_metrika_API'!";
 			$row = $list . "1:1";
 			$clear = new Google_Service_Sheets_ClearValuesRequest();
 			$result = $service->spreadsheets_values->clear($spreadsheetId, $row, $clear);
@@ -53,7 +53,7 @@ $sort= 			'ym:s:date,-ym:s:visits';
 
 // очистка таблицы
 	function clearTable($service, $spreadsheetId) {
-		$list = "'Выгрузка всех визитов'!";
+		$list = "'visits_metrika_API'!";
 		$row = $list . "A:Z";
 		$clear = new Google_Service_Sheets_ClearValuesRequest();
 		$result = $service->spreadsheets_values->clear($spreadsheetId, $row, $clear);
@@ -73,7 +73,7 @@ $sort= 			'ym:s:date,-ym:s:visits';
 			];
 
 			$options = ['valueInputOption' => 'RAW'];
-			$list = "'Выгрузка всех визитов'!";
+			$list = "'visits_metrika_API'!";
 			$row = $list . "A1";
 			$ValueRange = new Google_Service_Sheets_ValueRange(['values' => $headersArr]);
 			$result = $service->spreadsheets_values->update($spreadsheetId, $row, $ValueRange, $options);
@@ -108,7 +108,7 @@ $sort= 			'ym:s:date,-ym:s:visits';
 
 			$ValueRange = new Google_Service_Sheets_ValueRange(['values' => $strArr]);
 			$options = ['valueInputOption' => 'RAW'];
-			$list = "'Выгрузка всех визитов'!";
+			$list = "'visits_metrika_API'!";
 			$row = $list . "A2";
 			$result = $service->spreadsheets_values->update($spreadsheetId, $row, $ValueRange, $options);
 
@@ -121,9 +121,8 @@ $sort= 			'ym:s:date,-ym:s:visits';
 // Функция обновления строк отчета
 function appendRows($data, $service, $spreadsheetId) {
 	foreach ($data as $val) {
-		$date = date('Y-m-d',strtotime($val->dimensions[0]->name));
+		$date = date('d.m.Y', strtotime($val->dimensions[0]->name));
 		$domain = $val->dimensions[1]->name;
-		// $url = $val->dimensions[2]->name;
 		$visits = (int) $val->metrics[0];
 		$users = (int) $val->metrics[1];
 		$depth = round($val->metrics[2], 2);
@@ -132,7 +131,6 @@ function appendRows($data, $service, $spreadsheetId) {
 		$strArr[] = [
 				$date,
 				$domain,
-				// $url,
 				$visits,
 				$users,
 				$depth,
@@ -142,7 +140,7 @@ function appendRows($data, $service, $spreadsheetId) {
 
 	$ValueRange = new Google_Service_Sheets_ValueRange(['values' => $strArr]);
 	$options = ['valueInputOption' => 'RAW'];
-	$list = "'Выгрузка всех визитов'!";
+	$list = "'visits_metrika_API'!";
 	$row = $list . "A2";
 	$result = $service->spreadsheets_values->append($spreadsheetId, $row, $ValueRange, $options);
 

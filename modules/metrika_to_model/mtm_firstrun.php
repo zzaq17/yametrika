@@ -69,9 +69,9 @@ clearTable($service, $spreadsheetId);
 
 	$ValueRange = new Google_Service_Sheets_ValueRange(['values' => $strArr]);
 	$options = ['valueInputOption' => 'RAW'];
-	$list = "'Выгрузка всех визитов'!";
+	$list = "'visits_metrika_API'!";
 	$row = $list . "A2";
-	$result = $service->spreadsheets_values->append($spreadsheetId, $row, $ValueRange, $options);
+	$result = $service->spreadsheets_values->update($spreadsheetId, $row, $ValueRange, $options);
 	
 	updateHeaders($query, $service, $spreadsheetId);
 	print_r('<br>Конец скрипта');
