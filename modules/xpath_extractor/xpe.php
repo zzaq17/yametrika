@@ -1,87 +1,54 @@
 <?php
-declare(strict_types=1);
-error_reporting(E_ALL);
-ini_set('display_errors','1');
-
 require_once '../../settings/config.php';
 
+function saveHtmls($content,$dir) {
 
+	foreach ($content as $url) {
+			// 1. Очистка url от непечатаемых знаков
+			$url = trim($url);
 
-$content = file(__DIR__ . "\list_of_all_pages.txt");
-$i = 1;
-$dir = './htmls/';
+			// 2. Обработка url в корректный вид для Windows файлов
+			$lastsym = strlen($url)-1;
 
-foreach ($content as $url) {
-	$url = trim($url);
-
-	$lastsym = strlen($url)-1;
-	
-	if ($url[$lastsym] != "/") {
-		$search = array("https://", ".ru/");
-		$change   = array("", "_");
+			if ($url[$lastsym] != "/") {
+				$search = array("https://", ".ru/");
+				$change   = array("", "_");
+			}
+			elseif ($url[$lastsym-3] != ".") {
+				$search = array("https://", ".ru/", "/");
+				$change   = array("", "_", "");
+			}
+			else {
+				$search = array("https://", ".ru/");
+				$change   = array("", "", );
+			}
+			$file_name = str_replace($search, $change, $url);
+			// Присваивание имени файла
+			$file = $dir . $file_name . ".html";
+			
+			// 4. Открытие файла и загрузка в него html данных по URL через curl
+			$fp = fopen($file, 'w');
+				$ch = curl_init($url);
+				print_r(curl_error($ch)."<br>");
+				curl_setopt($ch, CURLOPT_FILE, $fp);
+				curl_setopt($ch, CURLOPT_FOLLOWLOCATION , true);
+				curl_setopt($ch, CURLOPT_HEADER, 0);
+				
+				curl_exec($ch);
+				print_r(curl_error($ch)."<br>");
+				curl_close($ch);
+			// 5. Закрытие файла
+			fclose($fp);
 	}
-	elseif ($url[$lastsym-3] != ".") {
-		$search = array("https://", ".ru/", "/");
-		$change   = array("", "_", "");
-	}
-	else {
-		$search = array("https://", ".ru/");
-		$change   = array("", "", );
-	}
-	$file_name = str_replace($search, $change, $url);
-	
-	$file = $dir . $file_name . ".html";
-	$fp = fopen($file, 'w');
-	$ch = curl_init($url);
-	print_r(curl_error($ch)."<br>");
-	curl_setopt($ch, CURLOPT_FILE, $fp);
-	curl_setopt($ch, CURLOPT_FOLLOWLOCATION , true);
-	curl_setopt($ch, CURLOPT_HEADER, 0);
-	
-	$data = curl_exec($ch);
-	print_r(curl_error($ch)."<br>");
-	
-	curl_close($ch);
-	
-	fclose($fp);
-	
-	// // $doc = new DOMDocument();
-	// // $doc->loadHTML($save_file_loc);
 
-	}
-// foreach ($content as $url) {
-// 	$fp = fopen(__DIR__ . $dir . $i, 'w');
-// 	$ch = curl_init(trim($url));
-// 	print_r(curl_error($ch)."<br>");
-// 	curl_setopt($ch, CURLOPT_FILE, $fp);
-// 	curl_setopt($ch, CURLOPT_FOLLOWLOCATION , true);
-// 	curl_setopt($ch, CURLOPT_HEADER, 0);
-// 	// curl_setopt(CURLOPT_COOKIEFILE, CURLOPT_COOKIEJAR);
-	
+	return true;
+};
 
-// 	$data = curl_exec($ch);
-// 	print_r(curl_error($ch)."<br>");
-	
-// 	curl_close($ch);
-	
-// 	fclose($fp);
-// 	$i++;
-// } 
-	
+$htmls 	= [];
+$dest 	= fopen(__DIR__ . "\results\result.csv", "w");
+
+function find_xpath($htmls,$dest) {
 
 
-	// $fp = fopen(__DIR__ . '/htmls/ramenskoye.standartcleaning.ru.html', 'w');
-	// $ch = curl_init('https://ramenskoye.standartcleaning.ru');
-	// print_r(curl_error($ch)."<br>");
-	// curl_setopt($ch, CURLOPT_FILE, $fp);
-	// curl_setopt($ch, CURLOPT_FOLLOWLOCATION , true);
-	// curl_setopt($ch, CURLOPT_HEADER, 0);
-	// // curl_setopt(CURLOPT_COOKIEFILE, CURLOPT_COOKIEJAR);
-	
-
-	// $data = curl_exec($ch);
-	// print_r(curl_error($ch)."<br>");
-	
-	// curl_close($ch);
-	
-	// fclose($fp);
+	return true;
+};
