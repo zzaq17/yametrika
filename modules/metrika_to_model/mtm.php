@@ -17,7 +17,7 @@ $sort= 			'ym:s:date,-ym:s:visits';
 // Функция получения json-ответа из Метрики по API-запросу. На выходе два массива: query - массив с заголовками, data - массив с метриками.
 	function sendRequest($date1,$date2,$group,$metrics,$dimensions,$sort) {
 			global $headers;
-			$request = "https://api-metrika.yandex.net/stat/v1/data/?metrics=".$metrics."&ids=50212432,48002045,50337838,56942572,57655366,62131978,72684979,46733565,49221070,46696410,49052279,51933194&accuracy=1&date1=".$date1."&date2=".$date2."&group=".$group."&dimensions=".$dimensions."&filters=ym:s:isRobot=='No'&include_annotations=false&proposed_accuracy=true&sort=".$sort."";
+			$request = "https://api-metrika.yandex.net/stat/v1/data/?metrics=".$metrics."&ids=50212432,48002045,50337838,56942572,57655366,62131978,72684979,46733565,49221070,46696410,49052279,51933194,87612744&accuracy=1&date1=".$date1."&date2=".$date2."&group=".$group."&dimensions=".$dimensions."&filters=ym:s:isRobot=='No'&include_annotations=false&proposed_accuracy=true&sort=".$sort."";
 			// print_r($request);
 			$curl = curl_init();
 			curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
