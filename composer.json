@@ -13,5 +13,7 @@
             "email": "az917r@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "phpquery/phpquery": "^0.0.4"
+    }
 }
