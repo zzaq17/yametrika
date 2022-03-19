@@ -9,18 +9,20 @@ $spreadsheetId = '1dQgxqMHVwApxEp1ZqcODMlXgX3UmKzoBsh_RTuHt6Ss';
 // Настройки запроса к Метрике
 $date1 = 		'2020-01-01';
 $date2 = 		'2020-01-20';
-$group = 		'day';
+$group = 		'month';
 $metrics= 	'ym:s:visits,ym:s:users,ym:s:pageDepth,ym:s:bounceRate';
 $dimensions='ym:s:date,ym:s:startURLDomain';
 $sort= 			'ym:s:date,-ym:s:visits';
 
 // Функция получения json-ответа из Метрики по API-запросу. На выходе два массива: query - массив с заголовками, data - массив с метриками.
-	function sendRequest($date1,$date2,$group,$metrics,$dimensions,$sort) {
+	function sendRequest($date1,$date2,$ids,$group,$metrics,$dimensions,$sort) {
 			global $headers;
-			$request = "https://api-metrika.yandex.net/stat/v1/data/?metrics=".$metrics."&ids=50212432,48002045,50337838,56942572,57655366,62131978,72684979,46733565,49221070,46696410,49052279,51933194,87612744&accuracy=1&date1=".$date1."&date2=".$date2."&group=".$group."&dimensions=".$dimensions."&filters=ym:s:isRobot=='No'&include_annotations=false&proposed_accuracy=true&sort=".$sort."";
-			// print_r($request);
+			$request = "https://api-metrika.yandex.net/stat/v1/data/?metrics=".$metrics."&ids=".$ids."&accuracy=1&date1=".$date1."&date2=".$date2."&group=".$group."&dimensions=".$dimensions."&filters=ym:s:isRobot=='No'&include_annotations=false&proposed_accuracy=true&sort=".$sort."";
+			// print($request);
+			// print_r('<br>');
 			$curl = curl_init();
 			curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+			curl_setopt($curl, CURLOPT_TIMEOUT, 400);
 			curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 			curl_setopt($curl, CURLOPT_VERBOSE, 1);
 			curl_setopt($curl, CURLOPT_URL, $request);
@@ -31,10 +33,9 @@ $sort= 			'ym:s:date,-ym:s:visits';
 
 			$data = $resultDecode->data;
 			$query = $resultDecode->query;
-
 		return [$data, $query];
 	}
-
+	
 	// [$data, $query] = sendRequest($date1,$date2,$group,$metrics,$dimensions,$sort);
 
 
@@ -52,8 +53,8 @@ $sort= 			'ym:s:date,-ym:s:visits';
 	
 
 // очистка таблицы
-	function clearTable($service, $spreadsheetId) {
-		$list = "'visits_metrika_API'!";
+	function clearTable($service, $spreadsheetId, $list) {
+		// $list = "'visits_metrika_API'!";
 		$row = $list . "A:Z";
 		$clear = new Google_Service_Sheets_ClearValuesRequest();
 		$result = $service->spreadsheets_values->clear($spreadsheetId, $row, $clear);
@@ -65,7 +66,7 @@ $sort= 			'ym:s:date,-ym:s:visits';
 
 
 // обновить Заголовки в таблице Заголовками из query ответа
-	function updateHeaders($query, $service, $spreadsheetId) {
+	function updateHeaders($query, $service, $spreadsheetId, $list) {
 			$dimHeaders = $query->dimensions;
 			$metHeaders = $query->metrics;
 			$headersArr = [
@@ -73,7 +74,6 @@ $sort= 			'ym:s:date,-ym:s:visits';
 			];
 
 			$options = ['valueInputOption' => 'RAW'];
-			$list = "'visits_metrika_API'!";
 			$row = $list . "A1";
 			$ValueRange = new Google_Service_Sheets_ValueRange(['values' => $headersArr]);
 			$result = $service->spreadsheets_values->update($spreadsheetId, $row, $ValueRange, $options);
@@ -85,7 +85,7 @@ $sort= 			'ym:s:date,-ym:s:visits';
 
 
 // Функция замены строк отчета
-	function updateRows($data, $service, $spreadsheetId) {
+	function updateRows($data, $service, $spreadsheetId,$list) {
 		foreach ($data as $val) {
 				$date = date('d.m.y',strtotime($val->dimensions[0]->name));
 				$domain = $val->dimensions[1]->name;
@@ -108,7 +108,6 @@ $sort= 			'ym:s:date,-ym:s:visits';
 
 			$ValueRange = new Google_Service_Sheets_ValueRange(['values' => $strArr]);
 			$options = ['valueInputOption' => 'RAW'];
-			$list = "'visits_metrika_API'!";
 			$row = $list . "A2";
 			$result = $service->spreadsheets_values->update($spreadsheetId, $row, $ValueRange, $options);
 
@@ -119,7 +118,7 @@ $sort= 			'ym:s:date,-ym:s:visits';
 
 
 // Функция обновления строк отчета
-function appendRows($data, $service, $spreadsheetId) {
+function appendRows($data, $service, $spreadsheetId,$list) {
 	foreach ($data as $val) {
 		$date = date('d.m.Y', strtotime($val->dimensions[0]->name));
 		$domain = $val->dimensions[1]->name;
@@ -140,7 +139,6 @@ function appendRows($data, $service, $spreadsheetId) {
 
 	$ValueRange = new Google_Service_Sheets_ValueRange(['values' => $strArr]);
 	$options = ['valueInputOption' => 'RAW'];
-	$list = "'visits_metrika_API'!";
 	$row = $list . "A2";
 	$result = $service->spreadsheets_values->append($spreadsheetId, $row, $ValueRange, $options);
 

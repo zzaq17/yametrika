@@ -13,69 +13,69 @@ $dimensions='ym:s:date,ym:s:startURLDomain';
 $sort= 			'ym:s:date,-ym:s:visits';
 
 // пустой массив для отправки строк в Gsheet
+$list = "'visits_metrika_API'!";
 $strArr 	= [];
 
-clearTable($service, $spreadsheetId);
+// Функция обновления строк отчета
+function addRows($date1,$group,$metrics,$dimensions,$sort,$service, $spreadsheetId, $list) {
+	global $ids;
+	clearTable($service, $spreadsheetId, $list);
+	$date = date_create($date1);
+	print_r('Первая Дата в цикле: ');
+	print_r(date_format($date, 'Y-m-d'));
+	$date1 = date_format($date, 'Y-m-d');
+	$date2 = date_format(date_add($date, date_interval_create_from_date_string('4 days')), 'Y-m-d');
+	print_r('<br><br>Первая Date1: ');
+	print_r($date1);
+	print_r('<br>Первая Date2: ');
+	print_r($date2);
+	$today = new DateTime();
+	$yesterday = date_sub($today, date_interval_create_from_date_string('1 day'));
+	print_r('<br>ДО: ');
+	print_r(date_format($yesterday, 'Y-m-d H:i'));
+	print_r('<br>');
+	
+	while ($date < $yesterday) {
+		[$data, $query] = sendRequest($date1,$date2,$ids,$group,$metrics,$dimensions,$sort);
+		foreach ($data as $val) {
+			$dimdate = date('Y-m-d',strtotime($val->dimensions[0]->name));
+			$domain = $val->dimensions[1]->name;
+			$visits = (int) $val->metrics[0];
+			$users = (int) $val->metrics[1];
+			$depth = round($val->metrics[2], 2);
+			$bounce = round($val->metrics[3], 2);
 
-	// Функция обновления строк отчета
-	function addRows($date1,$group,$metrics,$dimensions,$sort,$service, $spreadsheetId) {
-		$date = date_create($date1);
-		print_r('Первая Дата в цикле: ');
-		print_r(date_format($date, 'Y-m-d'));
-		$date1 = date_format($date, 'Y-m-d');
-		$date2 = $date2 = date_format(date_add($date, date_interval_create_from_date_string('7 days')), 'Y-m-d');
-		print_r('<br><br>Первая Date1: ');
-		print_r($date1);
-		print_r('<br>Первая Date2: ');
-		print_r($date2);
-		$today = new DateTime();
-		$yesterday = date_sub($today, date_interval_create_from_date_string('1 day'));
-		print_r('<br>ДО: ');
-		print_r(date_format($yesterday, 'Y-m-d H:i'));
-		print_r('<br>');
-		
-		while ($date < $yesterday) {
-			[$data, $query] = sendRequest($date1,$date2,$group,$metrics,$dimensions,$sort);
-			foreach ($data as $val) {
-				$dimdate = date('Y-m-d',strtotime($val->dimensions[0]->name));
-				$domain = $val->dimensions[1]->name;
-				$visits = (int) $val->metrics[0];
-				$users = (int) $val->metrics[1];
-				$depth = round($val->metrics[2], 2);
-				$bounce = round($val->metrics[3], 2);
+			$strArr[] = [
+					$dimdate,
+					$domain,
+					$visits,
+					$users,
+					$depth,
+					$bounce,
+			];
+			}
 
-				$strArr[] = [
-						$dimdate,
-						$domain,
-						$visits,
-						$users,
-						$depth,
-						$bounce,
-				];
-
+			$date1 = date_format(date_add(new DateTime($date2), date_interval_create_from_date_string('1 day')), 'Y-m-d');
+			print_r('<br>Date1: ');
+			print_r($date1);
+			$date2 = date_format(date_add(new DateTime($date1), date_interval_create_from_date_string('4 days')), 'Y-m-d');
+			print_r('<br>Date2: ');
+			print_r($date2);
+			$date = date_add($date, date_interval_create_from_date_string('5 days'));
+			print_r('<br>Date: ');
+			print_r($date2);
+			print_r('<br><br>');
 		}
 
-		$date1 = date_format(date_add(new DateTime($date2), date_interval_create_from_date_string('1 day')), 'Y-m-d');
-		print_r('<br>Date1: ');
-		print_r($date1);
-		$date2 = date_format(date_add(new DateTime($date1), date_interval_create_from_date_string('7 days')), 'Y-m-d');
-		print_r('<br>Date2: ');
-		print_r($date2);
-		$date = date_add($date, date_interval_create_from_date_string('8 days'));
-		print_r('<br>Date: ');
-		print_r($date2);
-		print_r('<br><br>');
-	}
+		$ValueRange = new Google_Service_Sheets_ValueRange(['values' => $strArr]);
+		$options = ['valueInputOption' => 'RAW'];
+		$row = $list . "A2";
+		$result = $service->spreadsheets_values->update($spreadsheetId, $row, $ValueRange, $options);
 
-	$ValueRange = new Google_Service_Sheets_ValueRange(['values' => $strArr]);
-	$options = ['valueInputOption' => 'RAW'];
-	$list = "'visits_metrika_API'!";
-	$row = $list . "A2";
-	$result = $service->spreadsheets_values->update($spreadsheetId, $row, $ValueRange, $options);
-	
-	updateHeaders($query, $service, $spreadsheetId);
-	print_r('<br>Конец скрипта');
-return $result;
+		updateHeaders($query, $service, $spreadsheetId,$list);
+		print_r('<br>Конец скрипта');
+		
+	return $result;
 }
 
-addRows($date1,$group,$metrics,$dimensions,$sort,$service, $spreadsheetId);
+addRows($date1,$group,$metrics,$dimensions,$sort,$service,$spreadsheetId,$list);
