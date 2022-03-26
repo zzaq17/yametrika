@@ -22,7 +22,7 @@ $sort= 			'ym:s:date,-ym:s:visits';
 			// print_r('<br>');
 			$curl = curl_init();
 			curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
-			curl_setopt($curl, CURLOPT_TIMEOUT, 400);
+			curl_setopt($curl, CURLOPT_TIMEOUT, 300);
 			curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 			curl_setopt($curl, CURLOPT_VERBOSE, 1);
 			curl_setopt($curl, CURLOPT_URL, $request);

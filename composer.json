@@ -14,6 +14,7 @@
         }
     ],
     "require": {
-        "phpquery/phpquery": "^0.0.4"
+        "phpquery/phpquery": "^0.0.4",
+        "google/apiclient": "^2.0"
     }
 }

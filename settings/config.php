@@ -55,5 +55,5 @@ $goalCondsTypes = [
 	'action' => 'специальный тип условия для целей JavaScript-событие',
 ];
 
-
 $gsheetID = '1mcLor5uxdnlowPvLAVSWGl_MiSuD76bb4UZ8JC98RbI';
+
