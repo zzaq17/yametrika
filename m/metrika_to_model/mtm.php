@@ -7,8 +7,8 @@ require_once '../../settings/gsheet-auth.php';
 $spreadsheetId = '1dQgxqMHVwApxEp1ZqcODMlXgX3UmKzoBsh_RTuHt6Ss';
 
 // Настройки запроса к Метрике
-$date1 = 		'2020-01-01';
-$date2 = 		'2020-01-20';
+$date1 = 		'2021-01-01';
+$date2 = 		'2021-01-20';
 $group = 		'month';
 $metrics= 	'ym:s:visits,ym:s:users,ym:s:pageDepth,ym:s:bounceRate';
 $dimensions='ym:s:date,ym:s:startURLDomain';
@@ -17,6 +17,7 @@ $sort= 			'ym:s:date,-ym:s:visits';
 // Функция получения json-ответа из Метрики по API-запросу. На выходе два массива: query - массив с заголовками, data - массив с метриками.
 	function sendRequest($date1,$date2,$ids,$group,$metrics,$dimensions,$sort) {
 			global $headers;
+
 			$request = "https://api-metrika.yandex.net/stat/v1/data/?metrics=".$metrics."&ids=".$ids."&accuracy=1&date1=".$date1."&date2=".$date2."&group=".$group."&dimensions=".$dimensions."&filters=ym:s:isRobot=='No'&include_annotations=false&proposed_accuracy=true&sort=".$sort."";
 			// print($request);
 			// print_r('<br>');
@@ -30,10 +31,16 @@ $sort= 			'ym:s:date,-ym:s:visits';
 			
 			$result = curl_exec($curl);
 			$resultDecode = json_decode($result);
-
-			$data = $resultDecode->data;
-			$query = $resultDecode->query;
-		return [$data, $query];
+			// Обработка ошибок
+			if (empty($resultDecode->errors)) {
+				$data = $resultDecode->data;
+				$query = $resultDecode->query;
+				return [$data, $query];
+			}
+			else {
+				// print_r('<br><br>' .'empty data for period: '. $date1 . ' - ' . $date2);
+				// print_r('<br><br>' .'<b>error-type:</b> '. $resultDecode->errors[0]->error_type . '<br> <b>message:</b> ' . $resultDecode->errors[0]->message);
+			}
 	}
 	
 	// [$data, $query] = sendRequest($date1,$date2,$group,$metrics,$dimensions,$sort);
@@ -77,7 +84,7 @@ $sort= 			'ym:s:date,-ym:s:visits';
 			$row = $list . "A1";
 			$ValueRange = new Google_Service_Sheets_ValueRange(['values' => $headersArr]);
 			$result = $service->spreadsheets_values->update($spreadsheetId, $row, $ValueRange, $options);
-
+		// print_r($headersArr);
 		return $result;
 	}
 
