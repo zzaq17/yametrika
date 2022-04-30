@@ -34,12 +34,15 @@ function updateGsheet() {
 			$goals = json_decode($result)->goals;
 			$currentDomain = $key;
 
+			// $i = 1;
 			foreach ($goals as $key => $val) {
 				$g = $goals[$key];
+				// print_r($currentDomain . ' Цель №'.$i.': ');
+				// print_r($g);
+				// print_r('<br>');
 				if (property_exists($g, 'conditions')) {
-					$c = $g->conditions[0];
-				}
-				
+					if (count($g->conditions)) {
+						$c = $g->conditions[0];
 					switch ($g->type) {
 
 						case 'url':
@@ -52,6 +55,8 @@ function updateGsheet() {
 										$g->goal_source,
 										$g->default_price,
 										$goalCondsTypes[$c->type],
+										$c->url,
+										$g->id,
 										$c->url,
 									];
 						break;
@@ -67,10 +72,12 @@ function updateGsheet() {
 										$g->default_price,
 										$goalCondsTypes[$c->type],
 										$c->url,
+										$g->id,
+										$c->url,
 									];
-									break;
+						break;
 									
-									default:
+						default:
 									$fullArray[] = [
 										$currentDomain,
 										$g->id,
@@ -80,9 +87,52 @@ function updateGsheet() {
 										$g->goal_source,
 										$g->default_price,
 									];
-							break;
+						break;
 						}
 				}
+				else {
+					switch ($g->type) {
+
+						case 'url':
+									$fullArray[] = [
+										$currentDomain,
+										$g->id,
+										$g->name,
+										$goalTypes[$g->type],
+										$g->is_retargeting,
+										$g->goal_source,
+										$g->default_price,
+									];
+						break;
+
+						case 'action':
+									$fullArray[] = [
+										$currentDomain,
+										$g->id,
+										$g->name,
+										$goalTypes[$g->type],
+										$g->is_retargeting,
+										$g->goal_source,
+										$g->default_price,
+									];
+						break;
+									
+						default:
+									$fullArray[] = [
+										$currentDomain,
+										$g->id,
+										$g->name,
+										$goalTypes[$g->type],
+										$g->is_retargeting,
+										$g->goal_source,
+										$g->default_price,
+									];
+						break;
+						}
+					}
+				}
+				// $i= $i
+			}
 		}
 
 		// Отправка массива в Google Sheets

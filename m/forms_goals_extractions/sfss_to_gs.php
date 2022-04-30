@@ -10,15 +10,19 @@ function sfss_to_gs($filename='', $delimiter=';') {
 	if(!file_exists($filename) || !is_readable($filename))
 		return FALSE;
 	
-	$data = [];
-	$csv_rows = [];
-	if (($handle = fopen($filename, 'r')) !== FALSE) {
-		fgetcsv($handle, 4000, $delimiter);
-		while (($row = fgetcsv($handle, 4000, $delimiter)) !== FALSE) {
+		$data = [];
+		$csv_rows = [];
+		if (($handle = fopen($filename, 'r')) !== FALSE) {
+			fgetcsv($handle, 4000, $delimiter);
+			while (($row = fgetcsv($handle, 4000, $delimiter)) !== FALSE) {
+			print_r($row);
+			print_r('<br>');
+			
+
 			$i = 1;
 			$j = 2;
 			foreach ($row as $key) {
-					if (strlen($row[$i]) > 0) {
+				if (strlen($row[$i]) > 0) {
 					$url = $row[0];
 					$data[] = [
 						[$url, $row[$i], $row[$j]],
@@ -75,4 +79,4 @@ return $response;
 }
 
 sfss_clear_gs();
-sfss_to_gs("sfss/sfss.csv");
+sfss_to_gs("sfss/sfss2.csv");

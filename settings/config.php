@@ -22,6 +22,7 @@ $counterIDs = [
 	'k31orto.ru' => '49052279',
 	// 'pechen.infox.ru' => '54754291',
 	'flebologcentr.ru' => '87612744',
+	'antiageklinika.ru' => '88670709',
 ];
 
 $ids = implode(',',$counterIDs);
@@ -45,6 +46,7 @@ $goalTypes = [
 	'search' => 'поиск по сайту',
 	'call' => 'звонок',
 	'conditional_call' => 'целевой звонок',
+	'social' => 'переход в соцсеть',
 ];
 
 $goalCondsTypes = [

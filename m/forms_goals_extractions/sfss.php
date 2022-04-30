@@ -59,4 +59,4 @@ function sfss_to_csv($filename='', $delimiter=';') {
 }
 
 
-sfss_to_csv("sfss/sfss.csv");
+sfss_to_csv("sfss/sfss2.csv");
