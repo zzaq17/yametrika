@@ -120,3 +120,5 @@ function addMonths($firstDate1,$date2,$counterIDs,$group,$metrics,$dimensions,$s
 	addMonths($firstDate1,$date2,$counterIDs,$group,$metrics,$dimensions,$sort,$service,$spreadsheetId,$list);
 	
 	echo '<br><br>The script was executed in ' . round((microtime(true) - $start), 2) . ' second';
+
+	
