@@ -1,8 +1,8 @@
 <?php 
-	require_once 'settings/auth.php';
-	require_once 'settings/config.php';
-	require_once 'classes/classes.php';
-	require_once 'settings/gsheet-auth.php';
+	require_once '../../settings/auth.php';
+	require_once '../../settings/config.php';
+	require_once '../../classes/classes.php';
+	require_once '../../settings/gsheet-auth.php';
 
 
 

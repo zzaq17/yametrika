@@ -1,6 +1,6 @@
 <?php
-require_once 'settings/config.php';
-require_once 'settings/gsheet-auth.php';
+require_once '../../settings/config.php';
+require_once '../../settings/gsheet-auth.php';
 // require_once 'bot/rpm-leads-bot.php';
 		// Отладка
 		// $json = '{"id":"19808","caller":"79601144551","callee":"74999554025","visit_id":null,"marker":"registraciyaznaka.ru","order_id":null,"date":"2022-01-26 19:01:04"}';

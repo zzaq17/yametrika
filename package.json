@@ -1,0 +1,32 @@
+{
+  "name": "rpm_analytics",
+  "version": "0.2.1",
+  "description": "Kit of scripts for RPM Group analytics and so on",
+  "main": "main.js",
+  "dependencies": {
+    "gulp-rsync": "^0.0.9",
+    "npm": "^8.5.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zzaq17/yametrika.git"
+  },
+  "keywords": [
+    "analytics"
+  ],
+  "author": "zzaq17 (az917r@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zzaq17/yametrika/issues"
+  },
+  "homepage": "https://github.com/zzaq17/yametrika#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.1.0"
+  }
+}

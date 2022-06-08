@@ -1,6 +1,6 @@
 <?php 
 
-require 'vendor/autoload.php';
+require '../../vendor/autoload.php';
 
 $today = date('d.m.y');
 $now = date('d.m.y_H.m.s');
@@ -8,20 +8,24 @@ $now = date('d.m.y_H.m.s');
 $counterIDs = [
 	'laparoskopiya.ru' => '50212432',
 	'gryzha-operaciya.ru' => '50337838',
-	'gemioplastika.ru' => '56942572',
+	'gernioplastika.ru' => '56942572',
 	'bezdiastaza.ru' => '57655366',
 	'klinikaboli.ru' => '48002045',
 	'port-sistema.ru' => '46733565',
 	'endometryoz.ru' => '62131978',
 	// 'puzyr.info ' => '51610628',
 	'udalenie-zhelchnogo.ru' => '49221070',
-	'laparoscope.ru' => '72684979',
+	// 'laparoscope.ru' => '72684979',
 	'paingkb.ru' => '46696410',
 	// 'amuletobereg.ru' => '56530147',
 	'udalenie-gemorroya.ru' => '51933194',
 	'k31orto.ru' => '49052279',
 	// 'pechen.infox.ru' => '54754291',
+	'flebologcentr.ru' => '87612744',
+	'antiageklinika.ru' => '88670709',
 ];
+
+$ids = implode(',',$counterIDs);
 
 $reports = [
 	'goals' => 'goals',
@@ -42,6 +46,7 @@ $goalTypes = [
 	'search' => 'поиск по сайту',
 	'call' => 'звонок',
 	'conditional_call' => 'целевой звонок',
+	'social' => 'переход в соцсеть',
 ];
 
 $goalCondsTypes = [
@@ -52,5 +57,5 @@ $goalCondsTypes = [
 	'action' => 'специальный тип условия для целей JavaScript-событие',
 ];
 
-
 $gsheetID = '1mcLor5uxdnlowPvLAVSWGl_MiSuD76bb4UZ8JC98RbI';
+
